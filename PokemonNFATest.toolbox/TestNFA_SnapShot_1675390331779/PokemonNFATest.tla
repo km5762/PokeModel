@@ -10,43 +10,36 @@ EXTENDS Naturals, Reals, Integers, Sequences
 \*S \in SUBSET Nat;
 \*FilterExample == {x \in S1 : x*2 \in S2}
 
-\*CONSTANTS S1
-\*ASSUME /\ S1 \subseteq Nat
 
-maxHealth == 100
 
-healthOptions == {x \in Int : x <= maxHealth}
+healthOptions == {x \in Real : x <= 100}
 \*\A x \in S1 x <= 100 \*{0,50,100}
-aliveHealths == {x \in Nat : x > 0 /\ x <= maxHealth}\*healthOptions - {0} \*{50,100}
+aliveHealths == {x \in Nat : x > 0 /\ x <= 100}\*healthOptions - {0} \*{50,100}
 healths == healthOptions \times healthOptions
 
 actions == {"PlayerAttack", "EnemyAttack", "Idle"}
 
 VARIABLES playerHealth, enemyHealth
 
-attackDamage == 60
-
 
 Init ==
-  /\ playerHealth = maxHealth
-  /\ enemyHealth = maxHealth
+  /\ playerHealth = 100
+  /\ enemyHealth = 100
 
 Invariant ==  
  /\ <<playerHealth, enemyHealth>> \in healths
 \* /\ \E x \in  {playerHealth, enemyHealth} : x \in aliveHealths
 
 PlayerAttack == 
-  /\ enemyHealth \in aliveHealths
-  /\ <<playerHealth, enemyHealth - attackDamage>> \in healths
-  /\ \E x \in  {playerHealth, enemyHealth - attackDamage} : x \in aliveHealths \*Takes out 0,0 as a state
+  /\ <<playerHealth, enemyHealth - 50>> \in healths
+  /\ \E x \in  {playerHealth, enemyHealth - 50} : x \in aliveHealths \*Takes out 0,0 as a state
   /\ playerHealth' = playerHealth
-  /\ enemyHealth' = enemyHealth - attackDamage
+  /\ enemyHealth' = enemyHealth - 50
 
 EnemyAttack == 
-  /\ playerHealth \in aliveHealths
-  /\ <<playerHealth - attackDamage, enemyHealth>> \in healths
-  /\ \E x \in  {playerHealth - attackDamage, enemyHealth} : x \in aliveHealths \*Takes out 0,0 as a state
-  /\ playerHealth' = playerHealth - attackDamage
+  /\ <<playerHealth - 50, enemyHealth>> \in healths
+  /\ \E x \in  {playerHealth - 50, enemyHealth} : x \in aliveHealths \*Takes out 0,0 as a state
+  /\ playerHealth' = playerHealth - 50
   /\ enemyHealth' = enemyHealth
 
 Idle == 
@@ -65,5 +58,5 @@ Spec == Init /\ [][Next]_<<playerHealth, enemyHealth>>
 
 =============================================================================
 \* Modification History
-\* Last modified Thu Feb 02 21:31:55 EST 2023 by ryan
+\* Last modified Thu Feb 02 21:11:56 EST 2023 by ryan
 \* Created Thu Feb 02 11:12:03 EST 2023 by ryan

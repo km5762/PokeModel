@@ -2,7 +2,7 @@
 TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 1 and seed -2267973938856841469 with 4 workers on 8 cores with 608MB heap and 1365MB offheap memory [pid: 1839] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 112 and seed -8550283193304938091 with 4 workers on 8 cores with 608MB heap and 1365MB offheap memory [pid: 99206] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -27,13 +27,13 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2023-02-02 21:31:08)
+Starting... (2023-02-02 21:11:44)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2023-02-02 21:31:09.
+Finished computing initial states: 1 distinct state generated at 2023-02-02 21:11:45.
 @!@!@ENDMSG 2190 @!@!@
 @!@!@STARTMSG 2193:0 @!@!@
 Model checking completed. No error has been found.
@@ -42,118 +42,100 @@ Model checking completed. No error has been found.
   calculated (optimistic):  val = 5.6E-18
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2023-02-02 21:31:09
+The coverage statistics at 2023-02-02 21:11:45
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
-<Init line 32, col 1 to line 32, col 4 of module PokemonNFATest>: 1:1
+<Init line 25, col 1 to line 25, col 4 of module PokemonNFATest>: 1:1
 @!@!@ENDMSG 2773 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 33, col 3 to line 34, col 28 of module PokemonNFATest: 1
+  line 26, col 3 to line 27, col 22 of module PokemonNFATest: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Next line 60, col 1 to line 60, col 4 of module PokemonNFATest>: 7:20
+<Next line 51, col 1 to line 51, col 4 of module PokemonNFATest>: 7:20
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 37, col 5 to line 37, col 45 of module PokemonNFATest: 16
+  line 30, col 5 to line 30, col 45 of module PokemonNFATest: 16
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 37, col 5 to line 37, col 33 of module PokemonNFATest: 8
+  |line 30, col 5 to line 30, col 33 of module PokemonNFATest: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 37, col 39 to line 37, col 45 of module PokemonNFATest: 8
+  |line 30, col 39 to line 30, col 45 of module PokemonNFATest: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 6 to line 41, col 33 of module PokemonNFATest: 13
+  line 34, col 6 to line 34, col 51 of module PokemonNFATest: 13
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 41, col 6 to line 41, col 16 of module PokemonNFATest: 8
+  |line 34, col 6 to line 34, col 39 of module PokemonNFATest: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 41, col 22 to line 41, col 33 of module PokemonNFATest: 8
+  |line 34, col 45 to line 34, col 51 of module PokemonNFATest: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 42, col 6 to line 42, col 61 of module PokemonNFATest: 11
+  line 35, col 51 to line 35, col 68 of module PokemonNFATest: 16
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 42, col 6 to line 42, col 49 of module PokemonNFATest: 6
+  |line 35, col 51 to line 35, col 51 of module PokemonNFATest: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 42, col 55 to line 42, col 61 of module PokemonNFATest: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 61 to line 43, col 78 of module PokemonNFATest: 16
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 43, col 61 to line 43, col 61 of module PokemonNFATest: 10
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 43, col 67 to line 43, col 78 of module PokemonNFATest: 10
+  |line 35, col 57 to line 35, col 68 of module PokemonNFATest: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  line 43, col 16 to line 43, col 57 of module PokemonNFATest: 6:16
+  line 35, col 16 to line 35, col 47 of module PokemonNFATest: 6:16
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 44, col 6 to line 44, col 33 of module PokemonNFATest: 6
+  line 36, col 6 to line 36, col 33 of module PokemonNFATest: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 45, col 6 to line 45, col 46 of module PokemonNFATest: 6
+  line 37, col 6 to line 37, col 36 of module PokemonNFATest: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 48, col 6 to line 48, col 34 of module PokemonNFATest: 13
+  line 40, col 6 to line 40, col 51 of module PokemonNFATest: 13
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 48, col 6 to line 48, col 17 of module PokemonNFATest: 8
+  |line 40, col 6 to line 40, col 39 of module PokemonNFATest: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 48, col 23 to line 48, col 34 of module PokemonNFATest: 8
+  |line 40, col 45 to line 40, col 51 of module PokemonNFATest: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 49, col 6 to line 49, col 61 of module PokemonNFATest: 11
+  line 41, col 51 to line 41, col 68 of module PokemonNFATest: 16
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 49, col 6 to line 49, col 49 of module PokemonNFATest: 6
+  |line 41, col 51 to line 41, col 51 of module PokemonNFATest: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 49, col 55 to line 49, col 61 of module PokemonNFATest: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 50, col 61 to line 50, col 78 of module PokemonNFATest: 16
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 50, col 61 to line 50, col 61 of module PokemonNFATest: 10
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 50, col 67 to line 50, col 78 of module PokemonNFATest: 10
+  |line 41, col 57 to line 41, col 68 of module PokemonNFATest: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  line 50, col 16 to line 50, col 57 of module PokemonNFATest: 6:16
+  line 41, col 16 to line 41, col 47 of module PokemonNFATest: 6:16
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 51, col 6 to line 51, col 48 of module PokemonNFATest: 6
+  line 42, col 6 to line 42, col 38 of module PokemonNFATest: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 52, col 6 to line 52, col 31 of module PokemonNFATest: 6
+  line 43, col 6 to line 43, col 31 of module PokemonNFATest: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 55, col 6 to line 55, col 46 of module PokemonNFATest: 16
+  line 46, col 6 to line 46, col 46 of module PokemonNFATest: 16
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 55, col 6 to line 55, col 34 of module PokemonNFATest: 8
+  |line 46, col 6 to line 46, col 34 of module PokemonNFATest: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 55, col 40 to line 55, col 46 of module PokemonNFATest: 8
+  |line 46, col 40 to line 46, col 46 of module PokemonNFATest: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 56, col 6 to line 56, col 33 of module PokemonNFATest: 8
+  line 47, col 6 to line 47, col 33 of module PokemonNFATest: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 57, col 6 to line 57, col 31 of module PokemonNFATest: 8
+  line 48, col 6 to line 48, col 31 of module PokemonNFATest: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(4) at 2023-02-02 21:31:09: 21 states generated (548 s/min), 8 distinct states found (208 ds/min), 0 states left on queue.
+Progress(4) at 2023-02-02 21:11:45: 21 states generated (588 s/min), 8 distinct states found (224 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
 21 states generated, 8 distinct states found, 0 states left on queue.
@@ -165,5 +147,5 @@ The depth of the complete state graph search is 4.
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 2339ms at (2023-02-02 21:31:09)
+Finished in 2182ms at (2023-02-02 21:11:45)
 @!@!@ENDMSG 2186 @!@!@
