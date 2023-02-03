@@ -20,5 +20,10 @@
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/PokeModel.tla</locationURI>
 		</link>
+		<link>
+			<name>PokeNFA.tla</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/PokeNFA.tla</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>

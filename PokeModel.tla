@@ -60,6 +60,6 @@ Spec == Init /\ [][Next]_<<qcur,str>>
 
 =============================================================================
 \* Modification History
-\* Last modified Mon Jan 30 11:41:23 EST 2023 by ryan
+\* Last modified Thu Feb 02 11:12:14 EST 2023 by ryan
 \* Last modified Mon Jan 30 11:15:02 EST 2023 by ryan
 \* Last modified Thu Jan 26 21:02:26 EST 2023 by Myles
