@@ -1,20 +1,12 @@
 --------------------------- MODULE PokemonNFATest ---------------------------
-EXTENDS Naturals, Reals, Integers, Sequences
+EXTENDS Naturals
 
 \*healthOptions = x: x <= 100 /\ x >= 0 x \in NATURALS
 \*CONSTANT health
 \*ASSUME health \in Nat /\ health <= 100 /\ health >= 0
 
-\*CONSTANT S1;
-\*S1 SUBSET Nat;
-\*S \in SUBSET Nat;
-\*FilterExample == {x \in S1 : x*2 \in S2}
-
-
-
-healthOptions == {x \in Nat : x <= 100}
-\*\A x \in S1 x <= 100 \*{0,50,100}
-aliveHealths == healthOptions \ {0}\*healthOptions - {0} \*{50,100}
+healthOptions == \A x: x \in Nat /\ x <= 100 \*{0,50,100}
+aliveHealths == {50,100}\*healthOptions - {0} \*{50,100}
 healths == healthOptions \times healthOptions
 
 actions == {"PlayerAttack", "EnemyAttack", "Idle"}
@@ -58,5 +50,5 @@ Spec == Init /\ [][Next]_<<playerHealth, enemyHealth>>
 
 =============================================================================
 \* Modification History
-\* Last modified Thu Feb 02 21:02:00 EST 2023 by ryan
+\* Last modified Thu Feb 02 20:31:19 EST 2023 by ryan
 \* Created Thu Feb 02 11:12:03 EST 2023 by ryan

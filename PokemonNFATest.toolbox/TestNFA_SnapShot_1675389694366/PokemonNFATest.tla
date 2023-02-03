@@ -14,7 +14,7 @@ EXTENDS Naturals, Reals, Integers, Sequences
 
 healthOptions == {x \in Nat : x <= 100}
 \*\A x \in S1 x <= 100 \*{0,50,100}
-aliveHealths == healthOptions \ {0}\*healthOptions - {0} \*{50,100}
+aliveHealths == {50,100}\*healthOptions - {0} \*{50,100}
 healths == healthOptions \times healthOptions
 
 actions == {"PlayerAttack", "EnemyAttack", "Idle"}
@@ -58,5 +58,5 @@ Spec == Init /\ [][Next]_<<playerHealth, enemyHealth>>
 
 =============================================================================
 \* Modification History
-\* Last modified Thu Feb 02 21:02:00 EST 2023 by ryan
+\* Last modified Thu Feb 02 21:01:25 EST 2023 by ryan
 \* Created Thu Feb 02 11:12:03 EST 2023 by ryan
