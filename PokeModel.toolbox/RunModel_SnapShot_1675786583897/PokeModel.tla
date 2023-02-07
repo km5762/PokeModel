@@ -22,11 +22,33 @@ VARIABLES playerHealth, enemyHealth
 
 attackDamage == 60
 
+
+ExampleModel == 
+<<{"a","b","c"},             \* Sigma
+  {"q0","q1","q2","q3", "q4", "q5"}, \* States
+  \* Transition function
+  [qa \in STRING |-> 
+    IF      qa = "a" THEN "q0"
+    ELSE IF qa = "b" THEN "q1"
+    ELSE IF qa = "c" THEN "q2"
+    ELSE qa[1]],
+    "q0", \* Start state
+    {"q4", "q5"} \* Accepting state(s)
+>>
+
+\*Sigma == ExampleModel[1]
+\*Q == ExampleModel[2]
+
 \* Describe initial state
 Init == 
     /\ str  = myStr
     /\ playerHealth = maxHealth
     /\ enemyHealth = maxHealth
+  
+Delta == ExampleModel[3]
+
+Accept == ExampleModel[5]
+
 
 playerHealthChange[health \in Int, a \in STRING] == 
     IF a = "b" THEN health - attackDamage
@@ -49,17 +71,15 @@ IF str = << >> THEN
  /\ \E x \in  {playerHealth, enemyHealth} : x \in aliveHealths
  
 ELSE 
-\*    /\ <<playerHealth, enemyHealth>> \in healths
-\*    /\ \E x \in  {playerHealth, enemyHealth} : x \in aliveHealths
-    
     /\ playerHealth' = playerHealthChange[playerHealth, str[1]]
     /\ enemyHealth'  = enemyHealthChange[enemyHealth, str[1]]
-    
-\*    /\ <<playerHealth', enemyHealth'>> \in healths
-\*    /\ \E x \in  {playerHealth', enemyHealth'} : x \in aliveHealths
     /\ str'  = Tail(str)
 
 Spec == Init /\ [][Next]_<<str,playerHealth,enemyHealth>>
+
+
+
+
 
 
 
@@ -100,6 +120,6 @@ Spec == Init /\ [][Next]_<<str,playerHealth,enemyHealth>>
 
 =============================================================================
 \* Modification History
-\* Last modified Tue Feb 07 11:24:52 EST 2023 by ryan
+\* Last modified Tue Feb 07 11:14:32 EST 2023 by ryan
 \* Last modified Mon Jan 30 11:15:02 EST 2023 by ryan
 \* Last modified Thu Jan 26 21:02:26 EST 2023 by Myles

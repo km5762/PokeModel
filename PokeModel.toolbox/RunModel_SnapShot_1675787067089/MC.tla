@@ -2,10 +2,10 @@
 EXTENDS PokeModel, TLC
 
 \* CONSTANT definitions @modelParameterConstants:0myStr
-const_167578710898125000 == 
-<<"a","b","a">>
+const_167578705896223000 == 
+<<"a","a","a","a","a">>
 ----
 
 =============================================================================
 \* Modification History
-\* Created Tue Feb 07 11:25:08 EST 2023 by ryan
+\* Created Tue Feb 07 11:24:18 EST 2023 by ryan
