@@ -2,7 +2,7 @@
 TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 43 and seed -2322787016682529840 with 4 workers on 8 cores with 608MB heap and 1365MB offheap memory [pid: 34001] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 44 and seed -8914624613536834112 with 4 workers on 8 cores with 608MB heap and 1365MB offheap memory [pid: 35431] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -10,14 +10,10 @@ Starting SANY...
 Parsing file /Users/ryan/Documents/GitHub/PokemonModel/PokeModel.toolbox/RunModel/MC.tla
 Parsing file /Users/ryan/Documents/GitHub/PokemonModel/PokeModel.toolbox/RunModel/PokeModel.tla
 Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/TLC.tla
-Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Naturals.tla
-Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Reals.tla
-Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Integers.tla
 Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Sequences.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Naturals.tla
 Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/FiniteSets.tla
 Semantic processing of module Naturals
-Semantic processing of module Integers
-Semantic processing of module Reals
 Semantic processing of module Sequences
 Semantic processing of module PokeModel
 Semantic processing of module FiniteSets
@@ -27,62 +23,68 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2023-02-07 11:17:04)
+Starting... (2023-02-07 11:34:47)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2023-02-07 11:17:10.
+Finished computing initial states: 1 distinct state generated at 2023-02-07 11:34:53.
 @!@!@ENDMSG 2190 @!@!@
 @!@!@STARTMSG 2193:0 @!@!@
 Model checking completed. No error has been found.
   Estimates of the probability that TLC did not check all reachable states
   because two distinct states had the same fingerprint:
-  calculated (optimistic):  val = 5.4E-20
+  calculated (optimistic):  val = 2.2E-19
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2023-02-07 11:17:10
+The coverage statistics at 2023-02-07 11:34:53
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
-<Init line 43, col 1 to line 43, col 4 of module PokeModel>: 1:1
+<Init line 41, col 1 to line 41, col 4 of module PokeModel>: 1:1
 @!@!@ENDMSG 2773 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 44, col 5 to line 46, col 30 of module PokeModel: 1
+  line 42, col 5 to line 43, col 19 of module PokeModel: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Next line 65, col 1 to line 65, col 4 of module PokeModel>: 0:1
+<Next line 52, col 1 to line 52, col 4 of module PokeModel>: 3:4
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 66, col 4 to line 66, col 14 of module PokeModel: 1
+  line 53, col 4 to line 53, col 14 of module PokeModel: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 67, col 2 to line 71, col 62 of module PokeModel: 1
+  line 54, col 2 to line 54, col 16 of module PokeModel: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 74, col 8 to line 74, col 63 of module PokeModel: 0
+  |line 54, col 2 to line 54, col 5 of module PokeModel: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 75, col 8 to line 75, col 61 of module PokeModel: 0
+  |line 54, col 11 to line 54, col 16 of module PokeModel: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 76, col 8 to line 76, col 24 of module PokeModel: 0
+  line 54, col 21 to line 54, col 32 of module PokeModel: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 37 to line 54, col 46 of module PokeModel: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 5 to line 57, col 24 of module PokeModel: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(1) at 2023-02-07 11:17:10: 2 states generated (16 s/min), 1 distinct states found (8 ds/min), 0 states left on queue.
+Progress(4) at 2023-02-07 11:34:53: 5 states generated (40 s/min), 4 distinct states found (32 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-2 states generated, 1 distinct states found, 0 states left on queue.
+5 states generated, 4 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 1.
+The depth of the complete state graph search is 4.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2268:0 @!@!@
-The average outdegree of the complete state graph is 0 (minimum is 0, the maximum 0 and the 95th percentile is 0).
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 1 and the 95th percentile is 1).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 7253ms at (2023-02-07 11:17:10)
+Finished in 7404ms at (2023-02-07 11:34:53)
 @!@!@ENDMSG 2186 @!@!@
