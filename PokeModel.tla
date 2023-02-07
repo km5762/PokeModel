@@ -5,7 +5,6 @@ EXTENDS Naturals, Reals, Integers, Sequences
 VARIABLE str
 
 \*a = player attack, b = enemy attack, c = do nothing
-\*q0 = (100,100), q1 = (100,50),q2 = (50,100) ,q3 = (50,50) ,q4 = Victory, q5 = Defeat
 
 CONSTANT myStr
 
@@ -49,14 +48,8 @@ IF str = << >> THEN
  /\ \E x \in  {playerHealth, enemyHealth} : x \in aliveHealths
  
 ELSE 
-\*    /\ <<playerHealth, enemyHealth>> \in healths
-\*    /\ \E x \in  {playerHealth, enemyHealth} : x \in aliveHealths
-    
     /\ playerHealth' = playerHealthChange[playerHealth, str[1]]
     /\ enemyHealth'  = enemyHealthChange[enemyHealth, str[1]]
-    
-\*    /\ <<playerHealth', enemyHealth'>> \in healths
-\*    /\ \E x \in  {playerHealth', enemyHealth'} : x \in aliveHealths
     /\ str'  = Tail(str)
 
 Spec == Init /\ [][Next]_<<str,playerHealth,enemyHealth>>
@@ -100,6 +93,6 @@ Spec == Init /\ [][Next]_<<str,playerHealth,enemyHealth>>
 
 =============================================================================
 \* Modification History
-\* Last modified Tue Feb 07 11:26:04 EST 2023 by ryan
+\* Last modified Tue Feb 07 11:44:09 EST 2023 by ryan
 \* Last modified Mon Jan 30 11:15:02 EST 2023 by ryan
 \* Last modified Thu Jan 26 21:02:26 EST 2023 by Myles

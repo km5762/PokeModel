@@ -2,19 +2,19 @@
 TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 124 and seed -4610331917528403531 with 4 workers on 8 cores with 608MB heap and 1365MB offheap memory [pid: 34568] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 33 and seed 1725921781327904110 with 4 workers on 8 cores with 608MB heap and 1365MB offheap memory [pid: 36168] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
 @!@!@ENDMSG 2220 @!@!@
 Parsing file /Users/ryan/Documents/GitHub/PokemonModel/PokeModel.toolbox/RunModel/MC.tla
 Parsing file /Users/ryan/Documents/GitHub/PokemonModel/PokeModel.toolbox/RunModel/PokeModel.tla
-Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/TLC.tla
-Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Naturals.tla
-Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Reals.tla
-Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Integers.tla
-Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Sequences.tla
-Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/7134FE64-8BF6-43BF-970D-96B5BD07D775/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/FiniteSets.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/95DE9BD7-1EC0-4091-BBD2-D37F8A74045B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/TLC.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/95DE9BD7-1EC0-4091-BBD2-D37F8A74045B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Naturals.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/95DE9BD7-1EC0-4091-BBD2-D37F8A74045B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Reals.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/95DE9BD7-1EC0-4091-BBD2-D37F8A74045B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Integers.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/95DE9BD7-1EC0-4091-BBD2-D37F8A74045B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Sequences.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/95DE9BD7-1EC0-4091-BBD2-D37F8A74045B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/FiniteSets.tla
 Semantic processing of module Naturals
 Semantic processing of module Integers
 Semantic processing of module Reals
@@ -27,13 +27,13 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2023-02-07 11:25:10)
+Starting... (2023-02-07 11:43:23)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2023-02-07 11:25:16.
+Finished computing initial states: 1 distinct state generated at 2023-02-07 11:43:29.
 @!@!@ENDMSG 2190 @!@!@
 @!@!@STARTMSG 2193:0 @!@!@
 Model checking completed. No error has been found.
@@ -42,49 +42,49 @@ Model checking completed. No error has been found.
   calculated (optimistic):  val = 2.2E-19
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2023-02-07 11:25:16
+The coverage statistics at 2023-02-07 11:43:29
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
-<Init line 26, col 1 to line 26, col 4 of module PokeModel>: 1:1
+<Init line 25, col 1 to line 25, col 4 of module PokeModel>: 1:1
 @!@!@ENDMSG 2773 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 27, col 5 to line 29, col 30 of module PokeModel: 1
+  line 26, col 5 to line 28, col 30 of module PokeModel: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Next line 43, col 1 to line 43, col 4 of module PokeModel>: 3:4
+<Next line 42, col 1 to line 42, col 4 of module PokeModel>: 3:4
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 44, col 4 to line 44, col 14 of module PokeModel: 4
+  line 43, col 4 to line 43, col 14 of module PokeModel: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 45, col 5 to line 45, col 14 of module PokeModel: 1
+  line 44, col 5 to line 44, col 14 of module PokeModel: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 46, col 5 to line 46, col 32 of module PokeModel: 1
+  line 45, col 5 to line 45, col 32 of module PokeModel: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 47, col 5 to line 47, col 30 of module PokeModel: 1
+  line 46, col 5 to line 46, col 30 of module PokeModel: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 48, col 5 to line 48, col 45 of module PokeModel: 1
+  line 47, col 5 to line 47, col 45 of module PokeModel: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 49, col 5 to line 49, col 62 of module PokeModel: 1
+  line 48, col 5 to line 48, col 62 of module PokeModel: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 49, col 45 to line 49, col 62 of module PokeModel: 2
+  |line 48, col 45 to line 48, col 62 of module PokeModel: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |line 49, col 15 to line 49, col 41 of module PokeModel: 1:3
+  |line 48, col 15 to line 48, col 41 of module PokeModel: 1:3
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 55, col 5 to line 60, col 24 of module PokeModel: 3
+  line 51, col 5 to line 53, col 24 of module PokeModel: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(4) at 2023-02-07 11:25:16: 5 states generated (42 s/min), 4 distinct states found (33 ds/min), 0 states left on queue.
+Progress(4) at 2023-02-07 11:43:29: 5 states generated (41 s/min), 4 distinct states found (33 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
 5 states generated, 4 distinct states found, 0 states left on queue.
@@ -96,5 +96,5 @@ The depth of the complete state graph search is 4.
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 1 and the 95th percentile is 1).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 7166ms at (2023-02-07 11:25:16)
+Finished in 7282ms at (2023-02-07 11:43:29)
 @!@!@ENDMSG 2186 @!@!@
