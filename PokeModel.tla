@@ -15,11 +15,14 @@ healthOptions == {x \in Int : x <= maxHealth}
 aliveHealths == {x \in Nat : x > 0 /\ x <= maxHealth}
 healths == healthOptions \times healthOptions
 
-actions == {"PlayerAttack", "EnemyAttack", "Idle"}
+\*actions == {"PlayerAttack", "EnemyAttack", "Idle", "Player Heal", "Enemy Heal", player attack 2, Enemy attack 2s}
+\*                    a             b           c         d               e            f                g
 
 VARIABLES playerHealth, enemyHealth
 
 attackDamage == 60
+attack2Damage == 30
+healAmmount == 20
 
 \* Describe initial state
 Init == 
@@ -28,12 +31,16 @@ Init ==
     /\ enemyHealth = maxHealth
 
 playerHealthChange[health \in Int, a \in STRING] == 
-    IF a = "b" THEN health - attackDamage
+    IF      a = "b" THEN health - attackDamage
+    ELSE IF a = "d" THEN health + healAmmount
+    ELSE IF a = "g" THEN health - attack2Damage
     ELSE health
 
 
 enemyHealthChange[health \in Int, a \in STRING] == 
-    IF a = "a" THEN health - attackDamage
+    IF      a = "a" THEN health - attackDamage
+    ELSE IF a = "e" THEN health + healAmmount
+    ELSE IF a = "f" THEN health - attack2Damage
     ELSE health
 
 \* Describe next states for each action
@@ -93,6 +100,6 @@ Spec == Init /\ [][Next]_<<str,playerHealth,enemyHealth>>
 
 =============================================================================
 \* Modification History
-\* Last modified Tue Feb 07 11:44:09 EST 2023 by ryan
+\* Last modified Thu Feb 09 20:17:23 EST 2023 by ryan
 \* Last modified Mon Jan 30 11:15:02 EST 2023 by ryan
 \* Last modified Thu Jan 26 21:02:26 EST 2023 by Myles
