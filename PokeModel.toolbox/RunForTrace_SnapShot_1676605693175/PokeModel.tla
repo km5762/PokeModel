@@ -16,20 +16,24 @@ aliveHealths == {x \in Nat : x > 0 /\ x <= maxHealth}
 healths == healthOptions \times healthOptions
 
 \*actions == {"PlayerAttack", "EnemyAttack", "Idle", "Player Heal", "Enemy Heal", player attack 2, Enemy attack 2s, Player buff attack, Enemy buff attack}
-VARIABLES playerHealth, enemyHealth,playerLastAttacked,playerAttackModifier,enemyAttackModifier
+VARIABLES playerHealth, enemyHealth,playerLastAttacked
 
 doneValue == 0
 
 playerAttackDamage == 60
 playerAttack2Damage == 30
+playerAttackModifier == 0
 
 enemyAttackDamage == 49
 enemyAttack2Damage == 30
+enemyAttackModifier == 0
 
 healAmmount == 20
 
 min[a \in Int, b \in Int] == 
    IF a < b THEN a ELSE b
+
+\*playerLastAttacked == 0
 
 \* Describe initial state
 Init == 
@@ -37,9 +41,6 @@ Init ==
     /\ playerHealth = maxHealth
     /\ enemyHealth = maxHealth
     /\ playerLastAttacked = 0
-    /\ enemyAttackModifier = 0
-    /\ playerAttackModifier = 0
-    
 
 playerHealthChange[health \in Int, a \in STRING] == 
     IF      a = "b" THEN health - (enemyAttackDamage + enemyAttackModifier)
@@ -83,6 +84,10 @@ Invariant ==
     \/ playerLastAttacked' /= playerLastAttacked
 
 
+\* Now need Player ORder
+\* And Dead cant attack
+\* and Dead cant be attacked
+
 Next == 
 IF str = << >> THEN
  /\ str' = str 
@@ -92,7 +97,7 @@ IF str = << >> THEN
  /\ playerAttackModifier' = playerAttackModifier
  /\ enemyAttackModifier' = enemyAttackModifier
  /\ Invariant
- /\ doneValue = 1
+ /\ doneValue = 0
  
 ELSE 
     /\ playerLastAttacked' = nextAttcked[str[1]]
@@ -107,8 +112,44 @@ ELSE
 Spec == Init /\ [][Next]_<<str,playerHealth,enemyHealth,playerLastAttacked,playerAttackModifier,enemyAttackModifier>>
 
 
+
+\*Init ==
+\*  /\ playerHealth = maxHealth
+\*  /\ enemyHealth = maxHealth
+\*
+\*Invariant ==  
+\* /\ <<playerHealth, enemyHealth>> \in healths
+\*
+\*PlayerAttack == 
+\*  /\ enemyHealth \in aliveHealths
+\*  /\ <<playerHealth, enemyHealth - attackDamage>> \in healths
+\*  /\ \E x \in  {playerHealth, enemyHealth - attackDamage} : x \in aliveHealths \*Takes out 0,0 as a state
+\*  /\ playerHealth' = playerHealth
+\*  /\ enemyHealth' = enemyHealth - attackDamage
+\*
+\*EnemyAttack == 
+\*  /\ playerHealth \in aliveHealths
+\*  /\ <<playerHealth - attackDamage, enemyHealth>> \in healths
+\*  /\ \E x \in  {playerHealth - attackDamage, enemyHealth} : x \in aliveHealths \*Takes out 0,0 as a state
+\*  /\ playerHealth' = playerHealth - attackDamage
+\*  /\ enemyHealth' = enemyHealth
+\*
+\*Idle == 
+\*  /\ <<playerHealth, enemyHealth>> \in healths
+\*  /\ playerHealth' = playerHealth
+\*  /\ enemyHealth' = enemyHealth
+\*
+\*
+\*Next ==
+\*  /\ Invariant
+\*  /\ \/ PlayerAttack
+\*     \/ EnemyAttack
+\*     \/ Idle
+\* 
+\*Spec == Init /\ [][Next]_<<playerHealth, enemyHealth>>
+
 =============================================================================
 \* Modification History
-\* Last modified Thu Feb 16 22:50:17 EST 2023 by ryan
+\* Last modified Thu Feb 16 22:48:03 EST 2023 by ryan
 \* Last modified Mon Jan 30 11:15:02 EST 2023 by ryan
 \* Last modified Thu Jan 26 21:02:26 EST 2023 by Myles

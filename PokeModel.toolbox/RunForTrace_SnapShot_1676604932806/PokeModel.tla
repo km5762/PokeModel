@@ -15,21 +15,22 @@ healthOptions == {x \in Int : x <= maxHealth}
 aliveHealths == {x \in Nat : x > 0 /\ x <= maxHealth}
 healths == healthOptions \times healthOptions
 
-\*actions == {"PlayerAttack", "EnemyAttack", "Idle", "Player Heal", "Enemy Heal", player attack 2, Enemy attack 2s, Player buff attack, Enemy buff attack}
-VARIABLES playerHealth, enemyHealth,playerLastAttacked,playerAttackModifier,enemyAttackModifier
+\*actions == {"PlayerAttack", "EnemyAttack", "Idle", "Player Heal", "Enemy Heal", player attack 2, Enemy attack 2s}
+\*                    a             b           c         d               e            f                g
+
+VARIABLES playerHealth, enemyHealth,playerLastAttacked
 
 doneValue == 0
 
-playerAttackDamage == 60
-playerAttack2Damage == 30
-
+attackDamage == 60
 enemyAttackDamage == 49
-enemyAttack2Damage == 30
-
+attack2Damage == 30
 healAmmount == 20
 
 min[a \in Int, b \in Int] == 
    IF a < b THEN a ELSE b
+
+\*playerLastAttacked == 0
 
 \* Describe initial state
 Init == 
@@ -37,40 +38,27 @@ Init ==
     /\ playerHealth = maxHealth
     /\ enemyHealth = maxHealth
     /\ playerLastAttacked = 0
-    /\ enemyAttackModifier = 0
-    /\ playerAttackModifier = 0
-    
 
 playerHealthChange[health \in Int, a \in STRING] == 
-    IF      a = "b" THEN health - (enemyAttackDamage + enemyAttackModifier)
+    IF      a = "b" THEN health - enemyAttackDamage
     ELSE IF a = "d" THEN min[health + healAmmount,maxHealth]
-    ELSE IF a = "g" THEN health - (enemyAttack2Damage + enemyAttackModifier)
+    ELSE IF a = "g" THEN health - attack2Damage
     ELSE health
 
-enemyHealthChange[health \in Int, a \in STRING] ==   
-    IF      a = "a" THEN health - (playerAttackDamage + playerAttackModifier)
+enemyHealthChange[health \in Int, a \in STRING] == 
+    IF      a = "a" THEN health - attackDamage
     ELSE IF a = "e" THEN min[health + healAmmount,maxHealth]
-    ELSE IF a = "f" THEN health - (playerAttack2Damage + playerAttackModifier)
+    ELSE IF a = "f" THEN health - attack2Damage
     ELSE health
 
 nextAttcked[a \in STRING] ==
     IF a = "a" THEN 1
     ELSE IF a = "d" THEN 1
     ELSE IF a = "f" THEN 1
-    ELSE IF a = "h" THEN 1
     ELSE IF a = "b" THEN -1
     ELSE IF a = "e" THEN -1
     ELSE IF a = "g" THEN -1
-    ELSE IF a = "i" THEN -1
     ELSE 0
-
-attackMod[a \in STRING] == 
-    IF a = "h" THEN playerAttackModifier + 10
-    ELSE playerAttackModifier
-
-enemyAttackMod[a \in STRING] == 
-    IF a = "i" THEN enemyAttackModifier + 10 
-    ELSE enemyAttackModifier  
 
 
 \* Describe next states for each action
@@ -83,32 +71,68 @@ Invariant ==
     \/ playerLastAttacked' /= playerLastAttacked
 
 
+\* Now need Player ORder
+\* And Dead cant attack
+\* and Dead cant be attacked
+
 Next == 
 IF str = << >> THEN
  /\ str' = str 
  /\ playerHealth' = playerHealth 
  /\ enemyHealth' = enemyHealth
  /\ playerLastAttacked' = playerLastAttacked 
- /\ playerAttackModifier' = playerAttackModifier
- /\ enemyAttackModifier' = enemyAttackModifier
  /\ Invariant
- /\ doneValue = 1
+ /\ doneValue = 0
  
 ELSE 
     /\ playerLastAttacked' = nextAttcked[str[1]]
     /\ Invariant
-    /\ playerAttackModifier' = attackMod[str[1]]
-    /\ enemyAttackModifier' = enemyAttackMod[str[1]]
     /\ playerHealth' = playerHealthChange[playerHealth, str[1]]
     /\ enemyHealth'  = enemyHealthChange[enemyHealth, str[1]]
     /\ <<playerHealth, enemyHealth>> \in aliveHealths \times aliveHealths
     /\ str'  = Tail(str)
 
-Spec == Init /\ [][Next]_<<str,playerHealth,enemyHealth,playerLastAttacked,playerAttackModifier,enemyAttackModifier>>
+Spec == Init /\ [][Next]_<<str,playerHealth,enemyHealth,playerLastAttacked>>
 
+
+
+\*Init ==
+\*  /\ playerHealth = maxHealth
+\*  /\ enemyHealth = maxHealth
+\*
+\*Invariant ==  
+\* /\ <<playerHealth, enemyHealth>> \in healths
+\*
+\*PlayerAttack == 
+\*  /\ enemyHealth \in aliveHealths
+\*  /\ <<playerHealth, enemyHealth - attackDamage>> \in healths
+\*  /\ \E x \in  {playerHealth, enemyHealth - attackDamage} : x \in aliveHealths \*Takes out 0,0 as a state
+\*  /\ playerHealth' = playerHealth
+\*  /\ enemyHealth' = enemyHealth - attackDamage
+\*
+\*EnemyAttack == 
+\*  /\ playerHealth \in aliveHealths
+\*  /\ <<playerHealth - attackDamage, enemyHealth>> \in healths
+\*  /\ \E x \in  {playerHealth - attackDamage, enemyHealth} : x \in aliveHealths \*Takes out 0,0 as a state
+\*  /\ playerHealth' = playerHealth - attackDamage
+\*  /\ enemyHealth' = enemyHealth
+\*
+\*Idle == 
+\*  /\ <<playerHealth, enemyHealth>> \in healths
+\*  /\ playerHealth' = playerHealth
+\*  /\ enemyHealth' = enemyHealth
+\*
+\*
+\*Next ==
+\*  /\ Invariant
+\*  /\ \/ PlayerAttack
+\*     \/ EnemyAttack
+\*     \/ Idle
+\* 
+\*Spec == Init /\ [][Next]_<<playerHealth, enemyHealth>>
 
 =============================================================================
 \* Modification History
-\* Last modified Thu Feb 16 22:50:17 EST 2023 by ryan
+\* Last modified Thu Feb 16 22:34:40 EST 2023 by ryan
 \* Last modified Mon Jan 30 11:15:02 EST 2023 by ryan
 \* Last modified Thu Jan 26 21:02:26 EST 2023 by Myles

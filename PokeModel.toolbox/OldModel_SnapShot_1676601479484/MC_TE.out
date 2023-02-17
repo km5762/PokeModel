@@ -1,0 +1,113 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 5 and seed 4592089576269840779 with 4 workers on 8 cores with 608MB heap and 1365MB offheap memory [pid: 17065] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/ryan/Documents/GitHub/PokemonModel/PokeModel.toolbox/OldModel/MC.tla
+Parsing file /Users/ryan/Documents/GitHub/PokemonModel/PokeModel.toolbox/OldModel/PokeModel.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/B1BF7DF7-23EA-45B3-8D50-9C6E70DCD537/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/TLC.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/B1BF7DF7-23EA-45B3-8D50-9C6E70DCD537/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Sequences.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/B1BF7DF7-23EA-45B3-8D50-9C6E70DCD537/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Naturals.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/B1BF7DF7-23EA-45B3-8D50-9C6E70DCD537/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module PokeModel
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-02-16 21:37:56)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2023-02-16 21:37:57.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 1000:1 @!@!@
+TLC threw an unexpected exception.
+This was probably caused by an error in the spec or model.
+See the User Output or TLC Console for clues to what happened.
+The exception was a java.lang.RuntimeException
+: Attempted to apply tuple
+<<>>
+to integer 1 which is out of domain.
+@!@!@ENDMSG 1000 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ str = <<"a", "b", "a">>
+/\ qcur = "q0"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Next line 56, col 5 to line 57, col 24 of module PokeModel>
+/\ str = <<"b", "a">>
+/\ qcur = "q1"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Next line 56, col 5 to line 57, col 24 of module PokeModel>
+/\ str = <<"a">>
+/\ qcur = "q3"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Next line 56, col 5 to line 57, col 24 of module PokeModel>
+/\ str = <<>>
+/\ qcur = "q4"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2103:1 @!@!@
+The error occurred when TLC was evaluating the nested
+expressions at the following positions:
+0. Line 56, column 5 to line 57, column 24 in PokeModel
+1. Line 56, column 8 to line 56, column 33 in PokeModel
+2. Line 56, column 16 to line 56, column 33 in PokeModel
+3. Line 56, column 16 to line 56, column 33 in PokeModel
+4. Line 56, column 27 to line 56, column 32 in PokeModel
+
+
+@!@!@ENDMSG 2103 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-02-16 21:37:57
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 41, col 1 to line 41, col 4 of module PokeModel>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 42, col 5 to line 43, col 19 of module PokeModel: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Next line 52, col 1 to line 52, col 4 of module PokeModel>: 3:6
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 8 to line 56, col 33 of module PokeModel: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 56, col 16 to line 56, col 33 of module PokeModel: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 8 to line 57, col 24 of module PokeModel: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(4) at 2023-02-16 21:37:57: 4 states generated (116 s/min), 4 distinct states found (116 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+4 states generated, 4 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 2087ms at (2023-02-16 21:37:57)
+@!@!@ENDMSG 2186 @!@!@

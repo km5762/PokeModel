@@ -1,0 +1,209 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 123 and seed -4263295815606525997 with 4 workers on 8 cores with 608MB heap and 1365MB offheap memory [pid: 20720] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/ryan/Documents/GitHub/PokemonModel/PokeModel.toolbox/RunForTrace/MC.tla
+Parsing file /Users/ryan/Documents/GitHub/PokemonModel/PokeModel.toolbox/RunForTrace/PokeModel.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/B1BF7DF7-23EA-45B3-8D50-9C6E70DCD537/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/TLC.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/B1BF7DF7-23EA-45B3-8D50-9C6E70DCD537/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Naturals.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/B1BF7DF7-23EA-45B3-8D50-9C6E70DCD537/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Reals.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/B1BF7DF7-23EA-45B3-8D50-9C6E70DCD537/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Integers.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/B1BF7DF7-23EA-45B3-8D50-9C6E70DCD537/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Sequences.tla
+Parsing file /private/var/folders/fd/90xwnnx92sncx3g7l8f6ydnh0000gn/T/AppTranslocation/B1BF7DF7-23EA-45B3-8D50-9C6E70DCD537/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Reals
+Semantic processing of module Sequences
+Semantic processing of module PokeModel
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-02-16 22:34:43)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2023-02-16 22:34:44.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2114:1 @!@!@
+Deadlock reached.
+@!@!@ENDMSG 2114 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ str = <<"a", "b", "d", "e", "d", "e", "d", "d">>
+/\ enemyHealth = 100
+/\ playerLastAttacked = 0
+/\ playerHealth = 100
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Next line 79, col 1 to line 93, col 24 of module PokeModel>
+/\ str = <<"b", "d", "e", "d", "e", "d", "d">>
+/\ enemyHealth = 40
+/\ playerLastAttacked = 1
+/\ playerHealth = 100
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Next line 79, col 1 to line 93, col 24 of module PokeModel>
+/\ str = <<"d", "e", "d", "e", "d", "d">>
+/\ enemyHealth = 40
+/\ playerLastAttacked = -1
+/\ playerHealth = 51
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Next line 79, col 1 to line 93, col 24 of module PokeModel>
+/\ str = <<"e", "d", "e", "d", "d">>
+/\ enemyHealth = 40
+/\ playerLastAttacked = 1
+/\ playerHealth = 71
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <Next line 79, col 1 to line 93, col 24 of module PokeModel>
+/\ str = <<"d", "e", "d", "d">>
+/\ enemyHealth = 60
+/\ playerLastAttacked = -1
+/\ playerHealth = 71
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <Next line 79, col 1 to line 93, col 24 of module PokeModel>
+/\ str = <<"e", "d", "d">>
+/\ enemyHealth = 60
+/\ playerLastAttacked = 1
+/\ playerHealth = 91
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <Next line 79, col 1 to line 93, col 24 of module PokeModel>
+/\ str = <<"d", "d">>
+/\ enemyHealth = 80
+/\ playerLastAttacked = -1
+/\ playerHealth = 91
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <Next line 79, col 1 to line 93, col 24 of module PokeModel>
+/\ str = <<"d">>
+/\ enemyHealth = 80
+/\ playerLastAttacked = 1
+/\ playerHealth = 100
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-02-16 22:34:44
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 36, col 1 to line 36, col 4 of module PokeModel>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 5 to line 40, col 29 of module PokeModel: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Next line 78, col 1 to line 78, col 4 of module PokeModel>: 7:26
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 79, col 4 to line 79, col 14 of module PokeModel: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 80, col 5 to line 80, col 14 of module PokeModel: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 81, col 5 to line 81, col 32 of module PokeModel: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 82, col 5 to line 82, col 30 of module PokeModel: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 83, col 5 to line 83, col 44 of module PokeModel: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 88, col 8 to line 88, col 48 of module PokeModel: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 88, col 30 to line 88, col 48 of module PokeModel: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 5 to line 68, col 45 of module PokeModel: 29
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 68, col 5 to line 68, col 33 of module PokeModel: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 68, col 39 to line 68, col 45 of module PokeModel: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 45 to line 69, col 62 of module PokeModel: 54
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 69, col 45 to line 69, col 45 of module PokeModel: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 69, col 51 to line 69, col 62 of module PokeModel: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  line 69, col 15 to line 69, col 41 of module PokeModel: 15:43
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 70, col 8 to line 70, col 18 of module PokeModel: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 71, col 8 to line 71, col 48 of module PokeModel: 54
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 71, col 8 to line 71, col 26 of module PokeModel: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 71, col 31 to line 71, col 48 of module PokeModel: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 90, col 8 to line 90, col 63 of module PokeModel: 26
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 91, col 8 to line 91, col 61 of module PokeModel: 26
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 92, col 8 to line 92, col 73 of module PokeModel: 52
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 92, col 8 to line 92, col 36 of module PokeModel: 26
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 92, col 42 to line 92, col 73 of module PokeModel: 26
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 93, col 8 to line 93, col 24 of module PokeModel: 26
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(8) at 2023-02-16 22:34:44: 14 states generated (383 s/min), 8 distinct states found (218 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+14 states generated, 8 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 8.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 1 and the 95th percentile is 1).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 2246ms at (2023-02-16 22:34:44)
+@!@!@ENDMSG 2186 @!@!@
