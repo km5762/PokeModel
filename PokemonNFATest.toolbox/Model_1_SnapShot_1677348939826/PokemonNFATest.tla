@@ -36,53 +36,40 @@ Invariant ==
 \* /\ \E x \in  {playerHealth, enemyHealth} : x \in aliveHealths
 
 PlayerAttack == 
-  /\ playerTurn
+  /\ playerTurn = TRUE
   /\ enemyHealth \in aliveHealths
   /\ <<playerHealth, enemyHealth - attackDamage>> \in healths
-  /\ enemyHealth - attackDamage \in aliveHealths
   /\ \E x \in  {playerHealth, enemyHealth - attackDamage} : x \in aliveHealths \*Takes out 0,0 as a state
   /\ playerHealth' = playerHealth
   /\ enemyHealth' = enemyHealth - attackDamage
   /\ playerTurn' = FALSE
 
 EnemyAttack == 
-  /\ ~playerTurn
+  /\ playerTurn = FALSE
   /\ playerHealth \in aliveHealths
   /\ <<playerHealth - attackDamage, enemyHealth>> \in healths
-  /\ playerHealth - attackDamage \in aliveHealths
   /\ \E x \in  {playerHealth - attackDamage, enemyHealth} : x \in aliveHealths \*Takes out 0,0 as a state
   /\ playerHealth' = playerHealth - attackDamage
   /\ enemyHealth' = enemyHealth
   /\ playerTurn' = TRUE
   
-playerWin == 
-    /\ playerTurn
-    /\ ~(enemyHealth - attackDamage \in aliveHealths)
-    /\ playerHealth \in aliveHealths
-    /\ playerHealth' = playerHealth
-    /\ enemyHealth' = 0
-    /\ playerTurn' = TRUE
+Idle == 
+  /\ <<playerHealth, enemyHealth>> \in healths
+  /\ playerHealth' = playerHealth
+  /\ enemyHealth' = enemyHealth
 
-playerLose == 
-    /\ ~playerTurn
-    /\ ~(playerHealth - attackDamage \in aliveHealths)
-    /\ enemyHealth \in aliveHealths
-    /\ playerHealth' = 0
-    /\ enemyHealth' = enemyHealth
-    /\ playerTurn' = FALSE
 
 Next ==
   /\ Invariant
   /\ \/ PlayerAttack
      \/ EnemyAttack
-     \/ playerWin
-     \/ playerLose
+     \/ Idle
  
 Spec == Init /\ [][Next]_<<playerHealth, enemyHealth, playerTurn>>
 
 =============================================================================
 \* Modification History
-\* Last modified Sat Feb 25 13:43:46 EST 2023 by Myles
+\* Last modified Sat Feb 25 13:14:57 EST 2023 by Myles
 \* Last modified Sat Feb 25 13:07:17 EST 2023 by Myles
 \* Last modified Thu Feb 02 21:31:55 EST 2023 by ryan
 \* Created Thu Feb 02 11:12:03 EST 2023 by ryan

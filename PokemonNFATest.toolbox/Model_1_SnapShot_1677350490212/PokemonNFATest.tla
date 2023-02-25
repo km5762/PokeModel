@@ -59,17 +59,11 @@ playerWin ==
     /\ playerTurn
     /\ ~(enemyHealth - attackDamage \in aliveHealths)
     /\ playerHealth \in aliveHealths
-    /\ playerHealth' = playerHealth
-    /\ enemyHealth' = 0
-    /\ playerTurn' = TRUE
 
 playerLose == 
     /\ ~playerTurn
     /\ ~(playerHealth - attackDamage \in aliveHealths)
     /\ enemyHealth \in aliveHealths
-    /\ playerHealth' = 0
-    /\ enemyHealth' = enemyHealth
-    /\ playerTurn' = FALSE
 
 Next ==
   /\ Invariant
@@ -82,7 +76,7 @@ Spec == Init /\ [][Next]_<<playerHealth, enemyHealth, playerTurn>>
 
 =============================================================================
 \* Modification History
-\* Last modified Sat Feb 25 13:43:46 EST 2023 by Myles
+\* Last modified Sat Feb 25 13:41:25 EST 2023 by Myles
 \* Last modified Sat Feb 25 13:07:17 EST 2023 by Myles
 \* Last modified Thu Feb 02 21:31:55 EST 2023 by ryan
 \* Created Thu Feb 02 11:12:03 EST 2023 by ryan
